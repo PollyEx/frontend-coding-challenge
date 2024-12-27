@@ -11,9 +11,6 @@ on:
 jobs:
   run_automation:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
     
     steps:
       - name: Checkout the repository
