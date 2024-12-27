@@ -22,3 +22,5 @@ async function setupFork(candidateUsername) {
   
   console.log(`Fork setup completed for ${candidateUsername}!`);
 }
+
+setupFork(process.argv[2]);
