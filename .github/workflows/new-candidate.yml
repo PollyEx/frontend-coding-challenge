@@ -10,7 +10,10 @@ on:
 
 jobs:
   run_automation:
-    runs-on: ubuntu-latest  # You can change the OS if needed
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
     
     steps:
       - name: Checkout the repository
