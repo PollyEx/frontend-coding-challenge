@@ -11,20 +11,15 @@ on:
 jobs:
   run_automation:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
     
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '23'
-
-      - name: Install dependencies
-        run: npm i @octokit/core
-
-      - name: Run automation script
-        run: node .github/create-fork.js ${{ github.event.inputs.candidate_username }}
+      - name: Create fork
+        run: "gh api --method POST -H \"Accept: application/vnd.github+json\" \
+              /repos/$OWNER/$REPO/forks -f \"name=$REPO-${{ github.event.inputs.candidate_username }}\""
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
