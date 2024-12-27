@@ -10,14 +10,9 @@ async function setupFork(candidateUsername) {
 
   await octokit.request('POST /repos/{owner}/{repo}/forks', {
     owner: repoOwner,
-    repo: repoName
-  });
-
-  await octokit.request('POST /repos/{owner}/{repo}/branches', {
-    owner: candidateUsername,
     repo: repoName,
-    branch: 'main',
-    newBranch: `candidate-${candidateUsername}`,
+    name: `${repoName}-${candidateUsername}`,
+    default_branch_only: true
   });
   
   console.log(`Fork setup completed for ${candidateUsername}!`);
