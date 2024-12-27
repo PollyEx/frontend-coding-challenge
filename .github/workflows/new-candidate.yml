@@ -26,3 +26,5 @@ jobs:
 
       - name: Run automation script
         run: node .github/create-fork.js ${{ github.event.inputs.candidate_username }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

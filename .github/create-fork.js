@@ -1,6 +1,8 @@
-const { Octokit } = require("@octokit/core");
+import Octokit from '@octokit/core';
 
-const octokit = new Octokit({ auth: `your_personal_access_token` });
+const octokit = new Octokit({ 
+  auth: process.env.GITHUB_TOKEN
+ });
 
 async function setupFork(candidateUsername) {
   const repoOwner = 'PollyEx'
