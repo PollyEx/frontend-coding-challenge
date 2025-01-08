@@ -25,7 +25,7 @@ All of the icons used in this project are svg files downloaded from [Font Awesom
 
 ### AI Integration
 
-Our product team at TaskBot really believes there is a market for a task list that uses an [LLM](https://en.wikipedia.org/wiki/Large_language_model) to help users brainstorm possible tasks. Our design team already did some discovery work and provided [the following designs](https://www.figma.com/design/cXVlfJKpDi3s8afFAghLzk/Front-End-Assessment). These designs are meant to be an aid for you in building out this feature, not a pixel perfect spec you need to follow.
+Our product team at TaskBot really believes there is a market for a task list that uses an [LLM](https://en.wikipedia.org/wiki/Large_language_model) to help users brainstorm possible tasks. Our design team already did some discovery work and provided [the following designs](https://www.figma.com/design/cXVlfJKpDi3s8afFAghLzk/Front-End-Assessment?node-id=0-1). These designs are meant to be an aid for you in building out this feature, not a pixel perfect spec you need to follow.
 
 Even with the design team's exploration, there are still lots of unknowns. Thankfully we have a senior level engineer like you to help us connect the dots. We're pretty sure we need a place for users to enter their prompt, maybe something like "I need help planning a birthday party for my daughter on Friday". The design team thought we'd have a chat, but that might have to wait for a future iteration. Hopefully the LLM can take the prompt and generate a list of new tasks for us to create for the user.
 
@@ -49,11 +49,11 @@ Ideally, our users would be able to drag and drop tasks to reorder them. For the
 
 ### Separate Completed Tasks
 
-Our product team at TaskBot has received a lot of feedback from upset customers who are frustrated that their completed tasks are mixed in with their incomplete tasks. The product team would like to know if you can implement a way to separate completed tasks from incomplete tasks. The design team already did some discovery work and provided [the following designs](https://www.figma.com/design/cXVlfJKpDi3s8afFAghLzk/Front-End-Assessment?node-id=52-245). These designs are meant to be an aid for you in building out this feature, not a pixel perfect spec you need to follow.
+Our product team at TaskBot has received a lot of feedback from upset customers who are frustrated that their completed tasks are mixed in with their incomplete tasks. The product team would like to know if you can implement a way to separate completed tasks from incomplete tasks. The design team already did some discovery work and provided [the following designs](https://www.figma.com/design/cXVlfJKpDi3s8afFAghLzk/Front-End-Assessment?node-id=71-269). These designs are meant to be an aid for you in building out this feature, not a pixel perfect spec you need to follow.
 
 ### Task Urgency
 
-Our tasks already have an optional due date field, but for the most part our product team feels like that value is underutilized. The design team has had a plan to display an "urgency badge" on each task to help users prioritize their tasks. Basically, each task with a due date should show a badge with user friendly text describing how far out this due date is, as well as a color-coding to help users quickly identify the most urgent tasks. Take a look at [one of our designs](https://www.figma.com/design/cXVlfJKpDi3s8afFAghLzk/Front-End-Assessment?node-id=52-245) to see how the design team imagined these badges looking. Again, these designs are meant to be an aid for you in building out this feature, not a pixel perfect spec you need to follow.
+Our tasks already have an optional due date field, but for the most part our product team feels like that value is underutilized. The design team has had a plan to display an "urgency badge" on each task to help users prioritize their tasks. Basically, each task with a due date should show a badge with user friendly text describing how far out this due date is, as well as a color-coding to help users quickly identify the most urgent tasks. Take a look at [one of our designs](https://www.figma.com/design/cXVlfJKpDi3s8afFAghLzk/Front-End-Assessment?node-id=71-269) to see how the design team imagined these badges looking. Again, these designs are meant to be an aid for you in building out this feature, not a pixel perfect spec you need to follow.
 
 ### Calendar View
 
