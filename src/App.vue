@@ -1,35 +1,35 @@
 <script setup lang="ts">
-import CardContainer from './components/CardContainer.vue'
-import TaskBotIcon from './assets/TaskBotIcon.svg'
-import CalendarIcon from './assets/CalendarIcon.svg'
-import ClipboardIcon from './assets/ClipboardIcon.svg'
-import ActionButton from './components/ActionButton.vue'
-import FormInput from './components/FormInput.vue'
-import { reactive, ref } from 'vue'
-import TaskList from './components/TaskList.vue'
+import CardContainer from "./components/CardContainer.vue";
+import TaskBotIcon from "./assets/TaskBotIcon.svg";
+import CalendarIcon from "./assets/CalendarIcon.svg";
+import ClipboardIcon from "./assets/ClipboardIcon.svg";
+import ActionButton from "./components/ActionButton.vue";
+import FormInput from "./components/FormInput.vue";
+import { reactive, ref } from "vue";
+import TaskList from "./components/TaskList.vue";
 
-const newDescription = ref<string>()
-const newDueDate = ref<Date>()
-const tasks = reactive<any[]>([])
+const newDescription = ref<string>();
+const newDueDate = ref<string>();
+const tasks = reactive<any[]>([]);
 
 function createTask(): void {
   tasks.push({
     description: newDescription.value,
     dueDate: newDueDate.value,
-    completed: false
-  })
+    completed: false,
+  });
 
-  clearForm()
+  clearForm();
 }
 
 function clearForm(): void {
-  newDescription.value = undefined
-  newDueDate.value = undefined
+  newDescription.value = undefined;
+  newDueDate.value = undefined;
 }
 
 function close(): void {
-  tasks.splice(0, tasks.length)
-  clearForm()
+  tasks.splice(0, tasks.length);
+  clearForm();
 }
 </script>
 
