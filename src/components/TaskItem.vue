@@ -1,30 +1,44 @@
 <script lang="ts" setup>
-import SquareIcon from '../assets/SquareIcon.svg'
-import CheckedIcon from '../assets/CheckedIcon.svg'
-import EllipsisIcon from '../assets/EllipsisIcon.svg'
+import TaskUrgency from "./TaskUrgency.vue";
 
-defineProps<{
-  task: { description: string, dueDate?: Date, completed: boolean}
-}>()
+import SquareIcon from "../assets/SquareIcon.svg";
+import CheckedIcon from "../assets/CheckedIcon.svg";
+import EllipsisIcon from "../assets/EllipsisIcon.svg";
+import { Task } from "../types/task";
+
+const { task } = defineProps<{
+  task: Task;
+}>();
 </script>
 
 <template>
   <div class="task-item">
     <div class="task-item__check">
       <template v-if="task.completed">
-        <CheckedIcon class="task-item__check-icon task-item__check-icon--checked" @click="task.completed = false" />
+        <CheckedIcon
+          class="task-item__check-icon task-item__check-icon--checked"
+          @click="task.completed = false"
+        />
       </template>
       <template v-else>
-        <SquareIcon class="task-item__check-icon" @click="task.completed = true" />
+        <SquareIcon
+          class="task-item__check-icon"
+          @click="task.completed = true"
+        />
       </template>
     </div>
 
-    <div class="task-item__description" :class="{'task-item__description--checked': task.completed}">
+    <div
+      class="task-item__description"
+      :class="{ 'task-item__description--checked': task.completed }"
+    >
       {{ task.description }}
     </div>
-    
+
+    <TaskUrgency :task="task" />
+
     <div class="task-item__menu">
-      <EllipsisIcon class="task-item__menu-icon"/>
+      <EllipsisIcon class="task-item__menu-icon" />
     </div>
   </div>
 </template>
